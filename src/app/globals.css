@@ -2,6 +2,13 @@
 
 @theme {
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif:
+    var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times,
+    serif;
 
-  --font-serif: var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-background: #19102e;
+  --color-text-main: #e0e0e0;
+  --color-text-sub: #9ca3af;
+  --color-accent: #b39124;
+  --color-border-white-10: rgba(255, 255, 255, 0.1);
 }

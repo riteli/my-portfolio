@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
+import Header from "@/components/layout/Header";
 import "./globals.css";
 
 const notoSansJp = Noto_Sans_JP({
@@ -24,11 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className="scroll-smooth">
       <body
-        className={`${notoSansJp.variable} ${shipporiMincho.variable} antialiased`}
+        className={`${notoSansJp.variable} ${shipporiMincho.variable} antialiased bg-background text-text-main`}
       >
-        {children}
+        <Header />
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   );
