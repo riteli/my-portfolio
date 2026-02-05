@@ -11,4 +11,46 @@
   --color-text-sub: #9ca3af;
   --color-accent: #b39124;
   --color-border-white-10: rgba(255, 255, 255, 0.1);
+  --color-cinema-black: #08050f;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.97;
+  }
+  5% {
+    opacity: 0.95;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  15% {
+    opacity: 0.98;
+  }
+  20% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 0.98;
+  }
+  80% {
+    opacity: 0.98;
+  }
+  100% {
+    opacity: 0.97;
+  }
+}
+
+.animate-project-flicker {
+  animation: flicker 3s infinite linear;
+}
+
+.bg-scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.1) 3px,
+    rgba(0, 0, 0, 0.1) 4px
+  );
 }
