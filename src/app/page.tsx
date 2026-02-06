@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
 import { useEffect, useRef, useState } from "react";
 
@@ -35,6 +36,9 @@ export default function SpotlightPage() {
   }, []);
 
   return (
-    <Hero />
+    <div>
+      <Hero />
+      <About />
+    </div>
   );
 }
