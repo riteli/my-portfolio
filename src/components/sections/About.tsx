@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import type { AboutSection } from "@/types";
 
@@ -15,21 +16,36 @@ export default function About() {
   const activeContent = SECTIONS.find((section) => section.id === activeId);
 
   return (
-    <section id="about">
-      <h2>About</h2>
-      <div>
-        <div>
-          <h3>{activeContent?.title}</h3>
-          <div>{/* コンテンツ */}</div>
+    <section id="about" className="w-full max-w-7xl ">
+      <h2 className="font-serif font-bold text-3xl text-text-main border-accent">
+        <span className="border-b">About</span>
+      </h2>
+      <div className="grid grid-cols-4 gap-4 mt-3 p-2 bg-cinema-black">
+        <div className="col-span-3 p-2">
+          <h3 className="pb-1.5 text-center text-2xl font-bold  border-b border-accent text-text-main">
+            {activeContent?.title}
+          </h3>
+          <div className="mt-4">
+            <p>dummy content</p>
+          </div>
         </div>
 
-        <nav aria-label="About Sections">
-          <ul>
+        <nav
+          className="col-span-1 p-2 border-l border-accent"
+          aria-label="About Sections"
+        >
+          <ul className="flex flex-col gap-6 items-center">
             {SECTIONS.map((section) => (
-              <li key={section.id}>
-                <button onClick={() => setActiveId(section.id)}>
-                  {section.title}
-                  {activeId === section.id && <span>(Active)</span> /* テスト用 */}
+              <li key={section.id} className="border-b border-accent">
+                <button
+                  className="flex gap-2 items-center"
+                  onClick={() => setActiveId(section.id)}
+                >
+                  <div>
+                    <p className="font-bold font-serif">THEATER{section.id}</p>
+                    <p className="font-sans">{section.title}</p>
+                  </div>
+                  <Image src="/opened-door.svg" alt="" width={35} height={35} />
                 </button>
               </li>
             ))}

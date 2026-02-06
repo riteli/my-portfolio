@@ -36,9 +36,9 @@ export default function SpotlightPage() {
   }, []);
 
   return (
-    <div>
+    <>
       <Hero />
       <About />
-    </div>
+    </>
   );
 }
