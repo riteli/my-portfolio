@@ -2,6 +2,7 @@
 
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
+import Works from "@/components/sections/Works";
 import { useEffect, useRef, useState } from "react";
 
 export default function SpotlightPage() {
@@ -39,6 +40,7 @@ export default function SpotlightPage() {
     <>
       <Hero />
       <About />
+      <Works />
     </>
   );
 }

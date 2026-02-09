@@ -12,6 +12,7 @@
   --color-accent: #b39124;
   --color-border-white-10: rgba(255, 255, 255, 0.1);
   --color-cinema-black: #08050f;
+  --color-work-card-bg: #231e33;
 }
 
 @keyframes flicker {
