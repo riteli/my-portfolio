@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
 import Works from "@/components/sections/Works";
 import { useEffect, useRef, useState } from "react";
@@ -41,6 +42,7 @@ export default function SpotlightPage() {
       <Hero />
       <About />
       <Works />
+      <Contact />
     </>
   );
 }
