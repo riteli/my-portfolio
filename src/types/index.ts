@@ -1,6 +1,10 @@
+import { ReactNode } from "react";
+
 export type AboutSection = {
   id: number;
   title: string;
+  subtitle: string;
+  content: ReactNode;
 };
 
 export type Work = {
