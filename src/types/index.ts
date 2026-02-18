@@ -11,6 +11,7 @@ export type Work = {
   id: number;
   title: string;
   speech: string;
+  imageUrl: string;
 };
 
 export type ContactInfo = {
