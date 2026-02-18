@@ -1,20 +1,7 @@
 "use client";
 
 import WorkCard from "../ui/WorkCard";
-import type { Work } from "@/types";
-
-const WORKS_DATA: Work[] = [
-  {
-    id: 1,
-    title: "My First Work",
-    speech: "This is my first work experience.",
-  },
-  {
-    id: 2,
-    title: "My Second Work",
-    speech: "This is my second work experience.",
-  },
-];
+import { WORKS_DATA } from "@/data/works";
 
 export default function Works() {
   return (
@@ -28,11 +15,7 @@ export default function Works() {
       <div className="relative mt-24">
         <div className="grid grid-cols-2 gap-x-12 gap-y-12 items-end">
           {WORKS_DATA.map((work, index) => (
-            <WorkCard
-              key={work.id}
-              work={work}
-              index={index}
-            />
+            <WorkCard key={work.id} work={work} index={index} />
           ))}
         </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { Work } from "@/types";
 
 type Props = {
@@ -8,24 +9,27 @@ type Props = {
 };
 
 export default function WorkCard({ work, index }: Props) {
-  const { title, speech } = work;
+  const { title, speech, imageUrl } = work;
 
   const isLeftColumn = index % 2 === 0;
 
   return (
-    <div
-      className="group relative w-full aspect-2/3 bg-work-card-bg p-6 rounded-lg border border-border-white-10 hover:border-accent flex flex-col justify-end shadow-lg brightness-75 hover:brightness-100 z-0 hover:z-50"
-      style={{
-        transitionProperty: "filter, border-color, z-index",
-        transitionDuration: "0.3s, 0.3s, 0s",
-        transitionDelay: "0s, 0s, 0.3s",
-      }}
-    >
+    <div className="group relative w-full aspect-2/3 flex flex-col gap-20 bg-work-card-bg p-6 rounded-lg border border-border-white-10 hover:border-accent shadow-lg brightness-75 hover:brightness-100 z-0 hover:z-50 [transition:all_0.3s_ease,z-index_0s_ease_0.3s] hover:[transition:all_0.3s_ease,z-index_0s_ease_0s]">
       <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[120%] h-[calc(100%+1rem)] bg-linear-to-b from-accent/30 to-transparent pointer-events-none [clip-path:polygon(50%_0%,100%_100%,0%_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+      <div className="relative w-full aspect-square">
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          sizes="(max-width: 350px) 100vw, 350px"
+          className="object-cover"
+        />
+      </div>
 
       <div
         className={`
-          absolute top-1/4 w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none
+          absolute top-1/4 w-64 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none
           ${
             isLeftColumn
               ? "left-[105%] translate-x-0"
@@ -33,8 +37,10 @@ export default function WorkCard({ work, index }: Props) {
           }
         `}
       >
-        <div className="bg-white text-black text-xs p-3 rounded-lg shadow-lg relative">
-          {speech}
+        <div className="bg-white p-4 rounded-lg shadow-lg relative ">
+          <p className="text-gray-800 font-sans leading-relaxed tracking-wide">
+            {speech}
+          </p>
 
           <div
             className={`
@@ -48,13 +54,9 @@ export default function WorkCard({ work, index }: Props) {
           />
         </div>
       </div>
-
-      <div className="relative z-0">
-        <h3 className="font-bold text-xl text-text-main leading-tight">
-          {title}
-        </h3>
-        <p className="text-text-sub text-sm mt-2">Design / Development</p>
-      </div>
+      <h3 className="font-bold text-xl text-text-main leading-tight text-center">
+        {title}
+      </h3>
     </div>
   );
 }
