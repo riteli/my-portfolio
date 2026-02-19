@@ -6,13 +6,14 @@ type Props = {
 };
 
 export default function TicketCard({ contact }: Props) {
-  const { title, link, label } = contact;
+  const { title, link, label, ariaLabel } = contact;
 
   return (
     <Link
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={ariaLabel}
       className="group relative flex w-full max-w-md cursor-pointer transition-transform hover:-translate-y-1"
     >
       <div className="relative flex w-full overflow-hidden rounded-lg border border-accent bg-cinema-black/50 backdrop-blur-sm">

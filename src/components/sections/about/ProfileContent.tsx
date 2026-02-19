@@ -31,7 +31,7 @@ export default function ProfileContent() {
           </div>
         </div>
 
-        <div className="w-48 shrink-0 opacity-80">
+        <div aria-hidden="true" className="w-48 shrink-0 opacity-80">
           <div className="w-full aspect-square border border-accent/30 bg-accent/5 flex items-center justify-center rounded-sm">
             <span className="text-accent font-serif text-5xl">P</span>
           </div>

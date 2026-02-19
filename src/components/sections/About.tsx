@@ -56,7 +56,7 @@ export default function About() {
 
         <nav
           className="col-span-1 border-l border-accent/30 bg-black/20"
-          aria-label="About Sections"
+          aria-label="Aboutセクションナビゲーション"
         >
           <ul className="flex flex-col gap-10 h-full justify-center items-center p-6">
             {SECTIONS.map((section) => (
@@ -65,6 +65,7 @@ export default function About() {
                 className="w-full border-b border-accent/30 pb-4 last:border-0"
               >
                 <button
+                  aria-current={activeId === section.id}
                   className="w-full flex items-center justify-between group transition-all duration-300"
                   onClick={() => setActiveId(section.id)}
                 >
