@@ -9,6 +9,7 @@ const CONTACT_DATA: ContactInfo[] = [
     title: "GitHub",
     link: "https://github.com/riteli",
     label: "CODE",
+    ariaLabel: "GitHubプロフィール (新しいタブで開く)",
   },
 ];
 

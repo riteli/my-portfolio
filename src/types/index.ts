@@ -19,4 +19,5 @@ export type ContactInfo = {
   title: string;
   link: string;
   label: string;
+  ariaLabel: string;
 };
