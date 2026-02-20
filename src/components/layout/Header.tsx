@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { scrollToSection } from "@/utils/scroll";
 
 export default function Header() {
   return (
@@ -8,6 +11,7 @@ export default function Header() {
           <li>
             <Link
               href="/"
+              onClick={(e) => scrollToSection(e, "/")}
               className="text-xl hover:text-text-main transition-colors border-r border-accent pr-4"
             >
               Top
@@ -16,6 +20,7 @@ export default function Header() {
           <li>
             <Link
               href="#about"
+              onClick={(e) => scrollToSection(e, "#about")}
               className="text-xl hover:text-text-main transition-colors border-r border-accent pr-4"
             >
               About
@@ -23,7 +28,8 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="#work"
+              href="#works"
+              onClick={(e) => scrollToSection(e, "#works")}
               className="text-xl hover:text-text-main transition-colors border-r border-accent pr-4"
             >
               Work
@@ -32,6 +38,7 @@ export default function Header() {
           <li>
             <Link
               href="#contact"
+              onClick={(e) => scrollToSection(e, "#contact")}
               className="text-xl hover:text-text-main transition-colors"
             >
               Contact
