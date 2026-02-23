@@ -12,6 +12,7 @@ export type Work = {
   title: string;
   speech: string;
   imageUrl: string;
+  githubUrl: string;
 };
 
 export type ContactInfo = {
