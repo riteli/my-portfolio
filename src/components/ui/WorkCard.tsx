@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { Work } from "@/types";
+import { FaGithub } from "react-icons/fa";
 
 type Props = {
   work: Work;
@@ -9,7 +10,7 @@ type Props = {
 };
 
 export default function WorkCard({ work, index }: Props) {
-  const { title, speech, imageUrl } = work;
+  const { title, speech, imageUrl, githubUrl } = work;
 
   const isLeftColumn = index % 2 === 0;
 
@@ -36,11 +37,7 @@ export default function WorkCard({ work, index }: Props) {
       <div
         className={`
           absolute top-1/4 w-64 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none
-          ${
-            isLeftColumn
-              ? "left-[105%]"
-              : "right-[105%]"
-          }
+          ${isLeftColumn ? "left-[105%]" : "right-[105%]"}
         `}
       >
         <div className="bg-white p-4 rounded-lg shadow-lg relative ">
@@ -63,6 +60,15 @@ export default function WorkCard({ work, index }: Props) {
       <h3 className="font-bold text-xl text-text-main leading-tight text-center">
         {title}
       </h3>
+      <a
+        href={githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex gap-3 justify-center items-center p-4 border border-border-white-10 rounded-md hover:bg-white/10"
+      >
+        <FaGithub size={24} />
+        <span className="font-sans text-text-main">リポジトリを見る</span>
+      </a>
     </div>
   );
 }
