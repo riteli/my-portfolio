@@ -17,7 +17,7 @@ export default function WorkCard({ work, index }: Props) {
   return (
     <div
       tabIndex={0}
-      className="group relative w-full aspect-2/3 flex flex-col gap-20 bg-work-card-bg p-6 rounded-lg border border-border-white-10 hover:border-accent shadow-lg brightness-75 hover:brightness-100 focus-within:brightness-100 z-0 hover:z-50 focus-within:z-50
+      className="group relative w-full h-full flex flex-col gap-6 bg-work-card-bg p-6 rounded-lg border border-border-white-10 hover:border-accent shadow-lg brightness-75 hover:brightness-100 focus-within:brightness-100 z-0 hover:z-50 focus-within:z-50
       [transition:all_0.3s_ease,z-index_0s_ease_0.3s]
       hover:[transition:all_0.3s_ease,z-index_0s_ease_0s]
       focus-within:[transition:all_0.3s_ease,z-index_0s_ease_0s]"
@@ -36,7 +36,7 @@ export default function WorkCard({ work, index }: Props) {
 
       <div
         className={`
-          absolute top-1/4 w-64 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none
+          hidden md:block absolute top-1/4 w-64 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none
           ${isLeftColumn ? "left-[105%]" : "right-[105%]"}
         `}
       >
@@ -60,11 +60,14 @@ export default function WorkCard({ work, index }: Props) {
       <h3 className="font-bold text-xl text-text-main leading-tight text-center">
         {title}
       </h3>
+      <p className="md:hidden font-sans text-sm text-text-main/80 leading-relaxed">
+        {speech}
+      </p>
       <a
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex gap-3 justify-center items-center p-4 border border-border-white-10 rounded-md hover:bg-white/10"
+        className="flex gap-3 justify-center items-center mt-auto p-4 border border-border-white-10 rounded-md hover:bg-white/10"
       >
         <FaGithub size={24} />
         <span className="font-sans text-text-main">リポジトリを見る</span>
