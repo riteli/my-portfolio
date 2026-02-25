@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ContactInfo } from "@/types";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 type Props = {
   contact: ContactInfo;
@@ -21,9 +22,12 @@ export default function TicketCard({ contact }: Props) {
           <p className="font-serif text-xs tracking-[0.2em] text-accent opacity-70 mb-1">
             ADMIT ONE
           </p>
-          <h3 className="font-bold text-2xl text-text-main group-hover:text-accent transition-colors">
-            {title}
-          </h3>
+          <div className="flex items-center gap-3">
+            <h3 className="font-bold text-2xl text-text-main group-hover:text-accent transition-colors">
+              {title}
+            </h3>
+            <FaExternalLinkAlt className="text-sm text-text-main/50 group-hover:text-accent transition-colors" />
+          </div>
 
           <div className="absolute -top-3 -right-1.75 h-4 w-4 rounded-full bg-black border-b border-accent" />
           <div className="absolute -bottom-3 -right-1.75 h-4 w-4 rounded-full bg-black border-t border-accent" />
