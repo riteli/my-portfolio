@@ -3,6 +3,7 @@ import { Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
 import Header from "@/components/layout/Header";
 import "./globals.css";
 
+// Googleフォントの読み込み設定
 const notoSansJp = Noto_Sans_JP({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
   description: "フロントエンドエンジニアを目指す尾形 律のポートフォリオです",
 };
 
+/**
+ * アプリケーションのルートレイアウト
+ * 全ページ共通のフォント設定、ヘッダー、およびベースとなるレイアウト構造を定義します。
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

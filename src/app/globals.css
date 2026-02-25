@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Tailwindのカスタムテーマ変数定義 */
 @theme {
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif:
@@ -15,6 +16,7 @@
   --color-work-card-bg: #231e33;
 }
 
+/* フィルムのちらつきを再現するアニメーション */
 @keyframes flicker {
   0% {
     opacity: 0.97;
@@ -46,6 +48,7 @@
   animation: flicker 3s infinite linear;
 }
 
+/* ブラウン管モニターのような走査線エフェクト */
 .bg-scanlines {
   background: repeating-linear-gradient(
     to bottom,
