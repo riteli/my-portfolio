@@ -8,7 +8,14 @@ type Props = {
   setActiveId: (id: number) => void;
 };
 
-export default function AboutMobileNav({ sections, activeId, setActiveId }: Props) {
+/**
+ * Aboutセクションのモバイル向けタブナビゲーション
+ */
+export default function AboutMobileNav({
+  sections,
+  activeId,
+  setActiveId,
+}: Props) {
   return (
     <nav
       className="lg:hidden w-full border-b border-accent/30 bg-black/20"
@@ -42,4 +49,4 @@ export default function AboutMobileNav({ sections, activeId, setActiveId }: Prop
       </ul>
     </nav>
   );
-};
+}

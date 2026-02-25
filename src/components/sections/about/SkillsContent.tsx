@@ -13,9 +13,14 @@ import {
 } from "react-icons/si";
 import SkillCard from "@/components/ui/SkillCard";
 
+/**
+ * Aboutセクションの「SKILLS」タブで表示する技術スタック一覧
+ * カテゴリごとにSkillCardを配置して表示します。
+ */
 export default function SkillsContent() {
   return (
     <div className="space-y-8 font-sans">
+      {/* 言語 */}
       <div>
         <h4 className="text-accent font-serif border-b border-accent/30 pb-2 mb-4 inline-block tracking-wider">
           Languages
@@ -44,6 +49,7 @@ export default function SkillsContent() {
         </div>
       </div>
 
+      {/* フレームワーク・ライブラリ */}
       <div>
         <h4 className="text-accent font-serif border-b border-accent/30 pb-2 mb-4 inline-block tracking-wider">
           Frameworks & Libraries
@@ -67,6 +73,7 @@ export default function SkillsContent() {
         </div>
       </div>
 
+      {/* ツール群 */}
       <div>
         <h4 className="text-accent font-serif border-b border-accent/30 pb-2 mb-4 inline-block tracking-wider">
           Tools

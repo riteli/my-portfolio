@@ -9,6 +9,9 @@ type Props = {
   setActiveId: (id: number) => void;
 };
 
+/**
+ * AboutセクションのPC向けタブナビゲーション
+ */
 export default function AboutPcNav({ sections, activeId, setActiveId }: Props) {
   return (
     <nav
@@ -60,6 +63,7 @@ export default function AboutPcNav({ sections, activeId, setActiveId }: Props) {
                 </div>
               </div>
 
+              {/* 選択時にハイライトされるドアアイコン */}
               <div
                 className={`transition-all duration-300 ${
                   activeId === section.id
