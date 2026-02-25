@@ -6,6 +6,10 @@ type Props = {
   contact: ContactInfo;
 };
 
+/**
+ * 映画のチケット風にデザインされたリンクカードコンポーネント
+ * 外部のプロフィールリンク（GitHubなど）への導線として使用します。
+ */
 export default function TicketCard({ contact }: Props) {
   const { title, link, label, ariaLabel } = contact;
 
@@ -18,6 +22,7 @@ export default function TicketCard({ contact }: Props) {
       className="group relative flex w-full max-w-md cursor-pointer transition-transform hover:-translate-y-1"
     >
       <div className="relative flex w-full overflow-hidden rounded-lg border border-accent bg-cinema-black/50 backdrop-blur-sm">
+        {/* チケットのメイン部分（左側） */}
         <div className="flex flex-1 flex-col justify-center p-6 border-r-2 border-dashed border-accent/30 relative">
           <p className="font-serif text-xs tracking-[0.2em] text-accent opacity-70 mb-1">
             ADMIT ONE
@@ -29,12 +34,15 @@ export default function TicketCard({ contact }: Props) {
             <FaExternalLinkAlt className="text-sm text-text-main/50 group-hover:text-accent transition-colors" />
           </div>
 
+          {/* チケットの切り取り線上下にある半円の切り欠きデザイン */}
           <div className="absolute -top-3 -right-1.75 h-4 w-4 rounded-full bg-black border-b border-accent" />
           <div className="absolute -bottom-3 -right-1.75 h-4 w-4 rounded-full bg-black border-t border-accent" />
         </div>
 
+        {/* チケットの半券部分（右側） */}
         <div className="flex w-32 flex-col items-center justify-center bg-accent/5 p-4 text-center">
           <div className="mb-2 h-8 w-8 rounded-full border border-accent flex items-center justify-center">
+            {/* ホバー時に点滅するインジケーター */}
             <span className="block h-3 w-3 bg-accent rounded-full group-hover:animate-pulse" />
           </div>
           <p className="text-xs font-bold tracking-wider text-text-main/80">
