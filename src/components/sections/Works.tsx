@@ -33,7 +33,7 @@ export default function Works() {
         </h2>
       </div>
 
-      <div className="relative mt-12">
+      <div className="relative mt-6 md:mt-12">
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex -ml-4 md:-ml-12 items-stretch">
             {WORKS_DATA.map((work, index) => (

@@ -17,14 +17,14 @@ export default function WorkCard({ work, index }: Props) {
   return (
     <div
       tabIndex={0}
-      className="group relative w-full h-full flex flex-col gap-6 bg-work-card-bg p-6 rounded-lg border border-border-white-10 hover:border-accent shadow-lg brightness-75 hover:brightness-100 focus-within:brightness-100 z-0 hover:z-50 focus-within:z-50
+      className="group relative w-full h-full flex flex-col gap-4 md:gap-6 bg-work-card-bg p-4 md:p-6 rounded-lg border border-border-white-10 hover:border-accent shadow-lg brightness-75 hover:brightness-100 focus-within:brightness-100 z-0 hover:z-50 focus-within:z-50
       [transition:all_0.3s_ease,z-index_0s_ease_0.3s]
       hover:[transition:all_0.3s_ease,z-index_0s_ease_0s]
       focus-within:[transition:all_0.3s_ease,z-index_0s_ease_0s]"
     >
       <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[120%] h-[calc(100%+1rem)] bg-linear-to-b from-accent/30 to-transparent pointer-events-none [clip-path:polygon(50%_0%,100%_100%,0%_100%)] opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300" />
 
-      <div className="relative w-full aspect-square">
+      <div className="relative w-full aspect-video md:aspect-square">
         <Image
           src={imageUrl}
           alt=""
@@ -67,7 +67,7 @@ export default function WorkCard({ work, index }: Props) {
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex gap-3 justify-center items-center mt-auto p-4 border border-border-white-10 rounded-md hover:bg-white/10"
+        className="flex gap-2 md:gap-3 justify-center items-center mt-auto p-3 md:p-4 border border-border-white-10 rounded-md hover:bg-white/10"
       >
         <FaGithub size={24} />
         <span className="font-sans text-text-main">リポジトリを見る</span>
