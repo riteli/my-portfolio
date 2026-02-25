@@ -1,5 +1,9 @@
 import type { Work } from "@/types";
 
+/**
+ * Worksセクションで表示する制作物のデータ一覧
+ * 新しい制作物を追加する場合は、この配列にオブジェクトを追加します。
+ */
 export const WORKS_DATA: Work[] = [
   {
     id: 1,
