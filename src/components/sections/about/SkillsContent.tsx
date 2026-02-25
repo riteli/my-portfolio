@@ -15,7 +15,7 @@ import SkillCard from "@/components/ui/SkillCard";
 
 export default function SkillsContent() {
   return (
-    <div className="space-y-8 font-sans h-full pr-2">
+    <div className="space-y-8 font-sans">
       <div>
         <h4 className="text-accent font-serif border-b border-accent/30 pb-2 mb-4 inline-block tracking-wider">
           Languages
