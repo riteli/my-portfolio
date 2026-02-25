@@ -28,10 +28,7 @@ export default function About() {
   const activeContent = SECTIONS.find((section) => section.id === activeId);
 
   return (
-    <section
-      id="about"
-      className="w-full max-w-6xl mx-auto px-6"
-    >
+    <section id="about" className="w-full max-w-6xl mx-auto px-6">
       <div className="text-center mb-10 lg:mb-16">
         <h2 className="font-serif font-bold text-3xl lg:text-4xl text-text-main inline-block pb-2 border-b border-accent">
           About
@@ -59,8 +56,11 @@ export default function About() {
             </h3>
           </div>
 
-          <div className="flex-1 z-10 overflow-y-auto pr-2 lg:pr-4">
-            {activeContent?.content}
+          <div className="relative flex-1 z-10 min-h-0">
+            <div className="h-full overflow-y-auto pr-2 lg:pr-4 pb-12">
+              {activeContent?.content}
+            </div>
+            <div className="absolute bottom-0 left-0 w-full h-16 bg-linear-to-t from-cinema-black to-transparent pointer-events-none" />
           </div>
         </div>
 
