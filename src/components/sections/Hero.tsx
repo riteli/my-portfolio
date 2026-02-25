@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative w-full aspect-[2.35/1] max-w-7xl bg-black flex flex-col justify-between items-center font-serif py-10 px-10 overflow-hidden shadow-2xl">
+    <section className="relative w-full aspect-4/3 md:aspect-[2.35/1] max-w-7xl bg-black flex flex-col justify-between items-center font-serif py-10 px-6 md:px-10 overflow-hidden shadow-2xl">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#000000_120%)] z-0" />
 
       <div className="absolute inset-0 bg-white/5 animate-project-flicker pointer-events-none z-0 mix-blend-overlay" />
