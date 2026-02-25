@@ -6,6 +6,10 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import WorkCard from "../ui/WorkCard";
 import { WORKS_DATA } from "@/data/works";
 
+/**
+ * 制作物一覧を表示するWorksセクション
+ * embla-carousel-reactを使用してスライダー形式でカードを配置します。
+ */
 export default function Works() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
@@ -34,6 +38,7 @@ export default function Works() {
       </div>
 
       <div className="relative mt-6 md:mt-12">
+        {/* スライダー本体の表示領域 */}
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex -ml-4 md:-ml-12 items-stretch">
             {WORKS_DATA.map((work, index) => (
@@ -47,6 +52,7 @@ export default function Works() {
           </div>
         </div>
 
+        {/* スライダーの操作ボタン */}
         <div className="flex justify-center gap-6 mt-8">
           <button
             onClick={scrollPrev}
@@ -64,6 +70,7 @@ export default function Works() {
           </button>
         </div>
 
+        {/* 装飾用の下部ライン */}
         <div className="w-full h-4 border-t-4 border-border-white-10 bg-linear-to-b from-white/5 to-transparent transform translate-y-4 rounded-full opacity-50" />
       </div>
     </section>
