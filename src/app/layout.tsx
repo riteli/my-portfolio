@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${notoSansJp.variable} ${shipporiMincho.variable} antialiased bg-background text-text-main`}
       >
         <Header />
-        <main className="flex flex-col items-center gap-10 mt-16">
+        <main className="flex flex-col items-center gap-16 md:gap-24 mt-16 mb-24">
           {children}
         </main>
       </body>

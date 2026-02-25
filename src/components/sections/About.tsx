@@ -30,7 +30,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full max-w-6xl mx-auto py-16 lg:py-24 px-6"
+      className="w-full max-w-6xl mx-auto px-6"
     >
       <div className="text-center mb-10 lg:mb-16">
         <h2 className="font-serif font-bold text-3xl lg:text-4xl text-text-main inline-block pb-2 border-b border-accent">
