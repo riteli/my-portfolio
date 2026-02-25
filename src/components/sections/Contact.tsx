@@ -15,7 +15,7 @@ const CONTACT_DATA: ContactInfo[] = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full max-w-4xl mx-auto py-20 px-6">
+    <section id="contact" className="w-full max-w-4xl mx-auto px-6">
       <div className="text-center mb-12">
         <h2 className="font-serif font-bold text-3xl text-text-main inline-block pb-2 border-b border-accent">
           Contact

@@ -26,7 +26,7 @@ export default function Works() {
   }, [emblaApi]);
 
   return (
-    <section id="works" className="w-full max-w-4xl mx-auto pt-8 px-6">
+    <section id="works" className="w-full max-w-4xl mx-auto px-6">
       <div className="text-center">
         <h2 className="font-serif font-bold text-3xl text-text-main inline-block pb-2 border-b border-accent">
           Works
