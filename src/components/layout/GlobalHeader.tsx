@@ -7,7 +7,7 @@ import { scrollToSection } from "@/utils/scroll";
  * サイトの共通ヘッダーコンポーネント
  * 画面上部に固定され、各セクションへのスムーズスクロールナビゲーションを提供します。
  */
-export default function Header() {
+export default function GlobalHeader() {
   return (
     <header className="sticky top-0 left-0 z-50 w-full px-6 backdrop-blur-md bg-background/80 border-b border-border-white-10">
       <nav aria-label="メインナビゲーション">

@@ -29,7 +29,7 @@ const SECTIONS: AboutSection[] = [
  * プロフィールとスキルをタブ切り替えで表示するレイアウトです。
  * SP向けナビゲーションとPC向けナビゲーションを画面幅に応じて出し分けます。
  */
-export default function About() {
+export default function AboutSection() {
   // 現在選択されているタブのIDを管理するステート
   const [activeId, setActiveId] = useState<number>(SECTIONS[0].id);
 

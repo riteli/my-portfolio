@@ -2,7 +2,7 @@
  * サイトのファーストビューとなるHeroセクション
  * 映画館のスクリーンを模したデザインとエフェクトを描画します。
  */
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="relative w-full aspect-4/3 md:aspect-[2.35/1] max-w-7xl bg-black flex flex-col justify-between items-center font-serif py-10 px-6 md:px-10 overflow-hidden shadow-2xl">
       {/* 背景のグラデーション */}
