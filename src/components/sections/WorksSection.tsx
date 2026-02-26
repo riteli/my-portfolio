@@ -10,7 +10,7 @@ import { WORKS_DATA } from "@/data/works";
  * 制作物一覧を表示するWorksセクション
  * embla-carousel-reactを使用してスライダー形式でカードを配置します。
  */
-export default function Works() {
+export default function WorksSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     slidesToScroll: 1,

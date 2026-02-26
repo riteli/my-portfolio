@@ -18,7 +18,7 @@ const CONTACT_DATA: ContactInfo[] = [
  * Contactセクションコンポーネント
  * 映画のチケット風デザイン（TicketCard）を用いて外部リンクへの導線を表示します。
  */
-export default function Contact() {
+export default function ContactSection() {
   return (
     <section id="contact" className="w-full max-w-4xl mx-auto px-6">
       <div className="text-center mb-12">

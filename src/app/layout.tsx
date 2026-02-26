@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
-import Header from "@/components/layout/Header";
+import GlobalHeader from "@/components/layout/GlobalHeader";
 import "./globals.css";
 
 // Googleフォントの読み込み設定
@@ -34,7 +34,7 @@ export default function RootLayout({
       <body
         className={`${notoSansJp.variable} ${shipporiMincho.variable} antialiased bg-background text-text-main`}
       >
-        <Header />
+        <GlobalHeader />
         <main className="flex flex-col items-center gap-16 md:gap-24 mt-16 mb-24">
           {children}
         </main>
