@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import type { Work } from "@/types";
+import type { MicroCMSWork } from "@/types";
 import { FaGithub } from "react-icons/fa";
 
 type Props = {
-  work: Work;
+  work: MicroCMSWork;
   index: number;
 };
 
@@ -14,7 +14,8 @@ type Props = {
  * PC表示時には、ホバー/フォーカスで映画のスポットライトのようなエフェクトと吹き出しが表示されます。
  */
 export default function WorkCard({ work, index }: Props) {
-  const { title, speech, imageUrl, githubUrl } = work;
+  const { title, speech, image, githubUrl } = work;
+  const imageUrl = image?.url || "https://placehold.jp/350x350.png";
 
   // PC表示時の吹き出しを左右どちらに出すかを決定するフラグ
   // 偶数インデックス（左側の列）の場合は右に、奇数インデックス（右側の列）の場合は左に出す
