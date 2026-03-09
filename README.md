@@ -5,7 +5,7 @@ UIの滑らかなインタラクションと、運用保守のしやすさを意
 
 ## 🌐 URL
 
-[VercelのデプロイURLをここに記載]
+https://my-portfolio-eht9uv6cv-ritelis-projects.vercel.app/
 
 ## 🛠 使用技術
 
