@@ -4,13 +4,17 @@ import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import WorkCard from "../ui/WorkCard";
-import { WORKS_DATA } from "@/data/works";
+import type { MicroCMSWork } from "@/types";
+
+type Props = {
+  works: Array<MicroCMSWork>; // microCMSから取得した制作物データの配列
+};
 
 /**
  * 制作物一覧を表示するWorksセクション
  * embla-carousel-reactを使用してスライダー形式でカードを配置します。
  */
-export default function WorksSection() {
+export default function WorksSection({ works }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     slidesToScroll: 1,
@@ -41,7 +45,7 @@ export default function WorksSection() {
         {/* スライダー本体の表示領域 */}
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex -ml-4 md:-ml-12 items-stretch">
-            {WORKS_DATA.map((work, index) => (
+            {works.map((work, index) => (
               <div
                 key={work.id}
                 className="flex-[0_0_100%] min-w-0 pl-4 md:flex-[0_0_50%] md:pl-12"
