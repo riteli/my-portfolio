@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio
 
-## Getting Started
+自身のスキルや制作物をまとめたポートフォリオサイトです。
+UIの滑らかなインタラクションと、運用保守のしやすさを意識して開発しました。
 
-First, run the development server:
+## 🌐 URL
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[VercelのデプロイURLをここに記載]
+
+## 🛠 使用技術
+
+- **フレームワーク:** Next.js (App Router) / React
+- **言語:** TypeScript
+- **スタイリング:** Tailwind CSS
+- **CMS:** microCMS
+- **その他ライブラリ:** embla-carousel-react (スライダー), react-icons
+
+## ✨ 主な機能と工夫した点
+
+### 1. microCMSの導入による運用保守コストの削減
+
+制作物（Works）のデータはコード内にハードコーディングせず、microCMSからAPI経由で取得する設計にしています。これにより、新しい実績を追加する際にソースコードを編集・デプロイする必要がなくなり、管理画面からのテキスト・画像登録のみでサイトを自動更新できるようにしました。
+
+### 2. App Routerを用いたServer/Clientコンポーネントの分離
+
+Next.js 13以降のApp Routerのベストプラクティスに則り、コンポーネントの責務を分離しています。
+
+- **Server Component (`page.tsx`):** APIキーを用いたmicroCMSへの安全なデータフェッチを担当。
+- **Client Component (`WorksSection.tsx` 等):** スライダー機能や、ホバー時のスポットライトエフェクトなど、ブラウザ側でのインタラクションを担当。
+
+### 3. こだわったUI
+
+- `embla-carousel-react` を用いた、PC/スマホ両対応の滑らかなカルーセルUI。
+- `WorkCard` では、CSSの `clip-path` や `brightness` を駆使し、映画のスポットライトのような独自のハイライトエフェクトを実装しています。
+
+## 📁 主要なディレクトリ構成
+
+```text
+src/
+├── app/                  # Next.js App Router (ルーティング・データフェッチ)
+├── components/
+│   ├── layout/           # ヘッダーなどの共通レイアウト
+│   ├── sections/         # ページを構成する各セクション (Hero, About, Works等)
+│   └── ui/               # 再利用可能なUIパーツ (WorkCard, SkillCard等)
+├── types/                # APIレスポンスやPropsの型定義
+└── utils/                # microCMSクライアントなどのユーティリティ関数
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
