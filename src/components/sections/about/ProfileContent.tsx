@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /**
  * Aboutセクションの「PROFILE」タブで表示する自己紹介コンテンツ
  */
@@ -35,12 +37,16 @@ export default function ProfileContent() {
           </div>
         </div>
 
-        {/* 右側：プロフィール画像のプレースホルダー */}
-        <div aria-hidden="true" className="w-24 md:w-48 shrink-0 opacity-80">
-          <div className="w-full aspect-square border border-accent/30 bg-accent/5 flex items-center justify-center rounded-sm">
-            <span className="text-accent font-serif text-2xl md:text-5xl">
-              P
-            </span>
+        {/* 右側：プロフィール画像 */}
+        <div aria-hidden="true" className="w-24 md:w-48 shrink-0 opacity-90">
+          <div className="relative w-full aspect-square border-2 border-accent/30 bg-accent/5 rounded-full overflow-hidden shadow-lg">
+            <Image
+              src="/profile-icon.png"
+              alt="尾形 律のプロフィール画像"
+              fill
+              sizes="(max-width: 768px) 96px, 192px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
